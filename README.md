@@ -114,6 +114,27 @@ export WALLPAPER_PATH="/tu/ruta/al/wallpaper.jpg"
 4. Instalar fuentes Nerd Fonts
 5. Reiniciar sesión
 
+## 🙏 Créditos y Agradecimientos
+
+Esta configuración no habría sido posible sin el trabajo de grandes desarrolladores de la comunidad que han compartido sus dotfiles y tutoriales de forma abierta.
+
+### Inspiración y Recursos
+
+- **[s4vitar](https://www.youtube.com/@s4vitar)** — Su curso de **Hack4U** ha sido fundamental para entender el funcionamiento de BSPWM, la automatización del entorno y las técnicas de hardening en Linux. Gran parte de la estructura y filosofía de este setup viene de sus materiales.
+
+- **[Gentleman Programming](https://gentlemanprogramming.com/)** — La configuración de **Neovim** está basada en su excepcional trabajo con LazyVim. También utilizo su herramienta **OpenCode** como base para el entorno de desarrollo. Su enfoque en la productividad y la estética es simplemente outstanding.
+
+- **[adi1090x](https://github.com/adi1090x)** — El tema de **Rofi** utilizado proviene de su increíble colección de configuraciones. Prácticamente no he modificado nada, ya que su trabajo es excelente tal cual.
+
+- **[gh0stzk](https://github.com/gh0stzk)** — La base de **Polybar** viene de una de sus configuraciones. He realizado algunas adaptaciones y eliminaciones para ajustarla a mis necesidades, pero el trabajo original es suyo.
+
+### Outros Recursos
+
+- **[LazyVim](https://lazyvim.org/)** — La base de la configuración de Neovim
+- **[BSPWM](https://github.com/baskerville/bspwm)** — El window manager
+- **[Picom](https://github.com/yshui/picom)** — Compositor de ventanas
+- **[Kitty](https://github.com/kovidgoyal/kitty)** — Terminal emulator
+
 ---
 
 **¿Preguntas o problemas?** Creates un issue en el repo.
