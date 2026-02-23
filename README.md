@@ -1,0 +1,119 @@
+# dotfiles
+
+Mi configuración personal del sistema. Usa BSPWM como window manager con una configuración optimizada para desarrollo.
+
+## ⚡ Quick Start
+
+```bash
+cd ~/Desktop/dotfiles
+./install.sh
+```
+
+## 📦 Requisitos
+
+### Window Manager & Sistema
+- `bspwm` - Window manager
+- `sxhkd` - Hotkeys
+- `polybar` - Barra superior
+- `rofi` - Menú de aplicaciones
+- `picom` - Compositor (transparencias)
+- `feh` - Fondo de pantalla
+
+### Terminal & Herramientas
+- `kitty` - Terminal
+- `neovim` - Editor (LazyVim config)
+- `zellij` - Multiplexer
+- `starship` - Prompt
+- `zsh` - Shell
+
+### Extras
+- `fish` - Fish shell (config included)
+- `btop` - Monitor de sistema
+- `dolphin` - Explorador de archivos
+- `NetworkManager-dmenu` - Wifi menu
+
+## 🎨 Temas
+
+- **Terminal**: Kitty con tema Tokyo Night
+- **Prompt**: Starship con paleta "Gentleman"
+- **Wallpaper**: Configurable en `~/.config/bspwm/bspwmrc`
+
+## ⌨ atajos Principales (Super = Tecla Windows)
+
+| Atajo | Acción |
+|-------|--------|
+| `Super + Return` | Abrir terminal (Kitty) |
+| `Super + d` | Menú Rofi |
+| `Super + f` | Firefox |
+| `Super + e` | Dolphin |
+| `Super + F4` | Menú de apagado |
+| `Super + q` | Cerrar ventana |
+| `Super + m` | Mode monocle |
+| `Super + {h,j,k,l}` | Mover foco |
+| `Super + Shift + {h,j,k,l}` | Mover ventana |
+| `Super + {1-5}` | Escritorios |
+| `Super + Escape` | Recargar SXHKD |
+
+### Audio & Brillo
+- `XF86AudioRaiseVolume` - Subir volumen
+- `XF86AudioLowerVolume` - Bajar volumen
+- `XF86AudioMute` - Silenciar
+- `XF86MonBrightnessUp` - Subir brillo
+- `XF86MonBrightnessDown` - Bajar brillo
+
+## 📁 Estructura
+
+```
+dotfiles/
+├── .config/
+│   ├── bspwm/          # Window manager
+│   ├── sxhkd/          # Hotkeys
+│   ├── polybar/        # Barra
+│   ├── rofi/           # Menú
+│   ├── picom/          # Compositor
+│   ├── kitty/          # Terminal
+│   ├── nvim/           # Neovim (LazyVim)
+│   ├── zellij/         # Terminal multiplexer
+│   └── starship/       # Prompt config
+├── .zshrc              # Zsh config
+├── .bash-preexec.sh    # Bash preexec
+├── install.sh          # Script de instalación
+└── .gitignore         # Archivos a ignorar
+```
+
+## 🔧 Personalización
+
+### Wallpaper
+Editá `~/.config/bspwm/bspwmrc` y cambiá:
+```bash
+WALLPAPER_PATH="${WALLPAPER_PATH:-$HOME/Pictures/wallpaper.png}"
+```
+
+O seteá la variable de entorno:
+```bash
+export WALLPAPER_PATH="/tu/ruta/al/wallpaper.jpg"
+```
+
+### Fuentes necesarias
+- JetBrains Mono
+- Hack Nerd Font
+- Fira Code
+- Font Awesome (para iconos)
+
+## ⚠️ Notas de Seguridad
+
+- **NO** subas a GitHub: `.ssh/`, `.gnupg/`, archivos con passwords/API keys
+- El `.gitignore` ya incluye las exclusions principales
+- Si usás scripts de pentesting/red team, revisá el contenido antes de commitear
+
+## 🤖 Pós-instalación (manual)
+
+1. Instalar LinuxBrew (si no lo tenés)
+2. Ejecutar `brew install bat lsd fzf zoxide starship atuin`
+3. Configurar neovim: `nvim +Lazy! sync`
+4. Instalar fuentes Nerd Fonts
+5. Reiniciar sesión
+
+---
+
+**¿Preguntas o problemas?** Creates un issue en el repo.

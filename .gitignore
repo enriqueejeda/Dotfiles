@@ -1,0 +1,94 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# GitIgnore para dotfiles
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Archivos sensibles - NUNCA subir
+# ═══════════════════════════════════════════════════════════════════════════════
+
+.ssh/
+.gnupg/
+.aws/
+.azure/
+.gcloud/
+.npm/_cacache/
+.yarn/
+.cache/
+.local/share/
+.cookie*
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+netrc
+.git-credentials
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Archivos temporales del sistema
+# ═══════════════════════════════════════════════════════════════════════════════
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*~
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Logs y archivos de errores
+# ═══════════════════════════════════════════════════════════════════════════════
+
+*.log
+.xsession-errors
+.xsession-errors.old
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Historiales de shell
+# ═══════════════════════════════════════════════════════════════════════════════
+
+.zsh_history
+.bash_history
+*.zcompdump*
+.atuin/
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Backups y archivos de instalación
+# ═══════════════════════════════════════════════════════════════════════════════
+
+*.backup
+*.bak
+*.old
+*.swp
+*.swo
+*~
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Datos de aplicaciones (opcional - incluir o no según preferencia)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Comentá/descomentá según lo que quieras incluir
+
+# Neovim (puede contener datos sensibles)
+# .local/share/nvim/
+
+# Firefox/Chrome (-contain sensitive data)
+# .mozilla/firefox/*.default/
+# .config/google-chrome/
+
+# DBeaver
+# .dbeaver/
+
+# KeepassXC
+# .config/keepassxc/
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Scripts personales con datos sensibles (si los hay)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Descomenta si tenés scripts con passwords/API keys
+# .config/bin/target
+# .config/bin/*.sh (revisar contenido antes de commitear)
