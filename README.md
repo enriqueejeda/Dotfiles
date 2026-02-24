@@ -12,6 +12,7 @@ cd ~/Desktop/dotfiles
 ## 📦 Requisitos
 
 ### Window Manager & Sistema
+
 - `bspwm` - Window manager
 - `sxhkd` - Hotkeys
 - `polybar` - Barra superior
@@ -20,6 +21,7 @@ cd ~/Desktop/dotfiles
 - `feh` - Fondo de pantalla
 
 ### Terminal & Herramientas
+
 - `kitty` - Terminal
 - `neovim` - Editor (LazyVim config)
 - `zellij` - Multiplexer
@@ -27,6 +29,7 @@ cd ~/Desktop/dotfiles
 - `zsh` - Shell
 
 ### Extras
+
 - `fish` - Fish shell (config included)
 - `btop` - Monitor de sistema
 - `dolphin` - Explorador de archivos
@@ -40,21 +43,22 @@ cd ~/Desktop/dotfiles
 
 ## ⌨ atajos Principales (Super = Tecla Windows)
 
-| Atajo | Acción |
-|-------|--------|
-| `Super + Return` | Abrir terminal (Kitty) |
-| `Super + d` | Menú Rofi |
-| `Super + f` | Firefox |
-| `Super + e` | Dolphin |
-| `Super + F4` | Menú de apagado |
-| `Super + q` | Cerrar ventana |
-| `Super + m` | Mode monocle |
-| `Super + {h,j,k,l}` | Mover foco |
-| `Super + Shift + {h,j,k,l}` | Mover ventana |
-| `Super + {1-5}` | Escritorios |
-| `Super + Escape` | Recargar SXHKD |
+| Atajo                       | Acción                 |
+| --------------------------- | ---------------------- |
+| `Super + Return`            | Abrir terminal (Kitty) |
+| `Super + d`                 | Menú Rofi              |
+| `Super + f`                 | Firefox                |
+| `Super + e`                 | Dolphin                |
+| `Super + F4`                | Menú de apagado        |
+| `Super + q`                 | Cerrar ventana         |
+| `Super + m`                 | Mode monocle           |
+| `Super + {h,j,k,l}`         | Mover foco             |
+| `Super + Shift + {h,j,k,l}` | Mover ventana          |
+| `Super + {1-5}`             | Escritorios            |
+| `Super + Escape`            | Recargar SXHKD         |
 
 ### Audio & Brillo
+
 - `XF86AudioRaiseVolume` - Subir volumen
 - `XF86AudioLowerVolume` - Bajar volumen
 - `XF86AudioMute` - Silenciar
@@ -84,27 +88,25 @@ dotfiles/
 ## 🔧 Personalización
 
 ### Wallpaper
+
 Editá `~/.config/bspwm/bspwmrc` y cambiá:
+
 ```bash
 WALLPAPER_PATH="${WALLPAPER_PATH:-$HOME/Pictures/wallpaper.png}"
 ```
 
 O seteá la variable de entorno:
+
 ```bash
 export WALLPAPER_PATH="/tu/ruta/al/wallpaper.jpg"
 ```
 
 ### Fuentes necesarias
+
 - JetBrains Mono
 - Hack Nerd Font
 - Fira Code
 - Font Awesome (para iconos)
-
-## ⚠️ Notas de Seguridad
-
-- **NO** subas a GitHub: `.ssh/`, `.gnupg/`, archivos con passwords/API keys
-- El `.gitignore` ya incluye las exclusions principales
-- Si usás scripts de pentesting/red team, revisá el contenido antes de commitear
 
 ## 🤖 Pós-instalación (manual)
 
@@ -120,15 +122,15 @@ Esta configuración no habría sido posible sin el trabajo de grandes desarrolla
 
 ### Inspiración y Recursos
 
-- **[s4vitar](https://www.youtube.com/@s4vitar)** — Su curso de **Hack4U** ha sido fundamental para entender el funcionamiento de BSPWM, la automatización del entorno y las técnicas de hardening en Linux. Gran parte de la estructura y filosofía de este setup viene de sus materiales.
+- **[s4vitar](https://www.youtube.com/@s4vitar)** — Su curso de **Hack4u** ha sido fundamental para entender el funcionamiento de BSPWM, la automatización del entorno y las técnicas de hardening en Linux. Gran parte de la estructura y filosofía de este setup viene de sus materiales.
 
-- **[Gentleman Programming](https://gentlemanprogramming.com/)** — La configuración de **Neovim** está basada en su excepcional trabajo con LazyVim. También utilizo su herramienta **OpenCode** como base para el entorno de desarrollo. Su enfoque en la productividad y la estética es simplemente outstanding.
+- **[Gentleman Programming](https://gentlemanprogramming.com/)** — La configuración de **Neovim** está basada en su excepcional trabajo con LazyVim. También utilizo su herramienta **OpenCode** como base para el entorno de desarrollo,con sus agentes y configuracion con engram excepcional. Su enfoque en la productividad y la estética es simplemente outstanding.
 
 - **[adi1090x](https://github.com/adi1090x)** — El tema de **Rofi** utilizado proviene de su increíble colección de configuraciones. Prácticamente no he modificado nada, ya que su trabajo es excelente tal cual.
 
 - **[gh0stzk](https://github.com/gh0stzk)** — La base de **Polybar** viene de una de sus configuraciones. He realizado algunas adaptaciones y eliminaciones para ajustarla a mis necesidades, pero el trabajo original es suyo.
 
-### Outros Recursos
+### Otros Recursos
 
 - **[LazyVim](https://lazyvim.org/)** — La base de la configuración de Neovim
 - **[BSPWM](https://github.com/baskerville/bspwm)** — El window manager
