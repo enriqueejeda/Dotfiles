@@ -1,17 +1,19 @@
 #! /bin/sh
 
+# SEGURO: Iniciar sxhkd solo si no está ya corriendo
 pgrep -x sxhkd > /dev/null || sxhkd &
 
+# Configurar monitores - 5 escritorios
 bspc monitor -d I II III IV V
 
+# Configuración de ventanas
 bspc config border_width         2
 bspc config window_gap          12
-
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-# Añade esto a tu bspwmrc
+# Reglas para aplicaciones (state=floating para herramientas del sistema)
 bspc rule -a Nm-connection-editor state=floating rectangle=400x500+0+0 center=true
 bspc rule -a Blueman-manager state=floating rectangle=400x500+0+0 center=true
 bspc rule -a Gimp desktop='^8' state=floating follow=on
@@ -19,14 +21,25 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+
+# Sin bordes
 bspc config border_width 0
 
-# NOTE: Set your wallpaper path here or use an environment variable
-# Default: $HOME/Pictures/wallpaper.png (change this to your preferred path)
-WALLPAPER_PATH="${WALLPAPER_PATH:-$HOME/Pictures/wallpaper.png}"
-/usr/bin/feh --bg-fill "$WALLPAPER_PATH" &
-~/.config/polybar/./launch.sh &
+# SEGURO: Wallpaper - usa ruta relativa desde $HOME
+# Nota: Cambia esta ruta a tu ubicación de wallpapers
+if [ -f "$HOME/Desktop/lyk0s/Fondos/Fondo.jpg" ]; then
+    /usr/bin/feh --bg-fill "$HOME/Desktop/lyk0s/Fondos/Fondo.jpg" &
+fi
+
+# Iniciar polybar
+"$HOME/.config/polybar/./launch.sh" &
+
+# Compositor
 picom &
+
+# Applets del sistema
 blueman-applet &
 nm-applet &
+
+# Teclado
 setxkbmap -option compose:ralt &

@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Script para mostrar el título de Spotify con efecto scrolling
+# SEGURO: Solo lee metadatos, no modifica nada
 
 # Ancho máximo visible en polybar
 MAX_WIDTH=25

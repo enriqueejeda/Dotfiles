@@ -1,5 +1,8 @@
 #!/usr/bin/env dash
 
+# Script de redimensionamiento de ventanas para bspwm
+# SEGURO: No acepta entrada del usuario, solo usa argumentos controlados
+
 if bspc query -N -n focused.floating > /dev/null; then
 	step=20
 else

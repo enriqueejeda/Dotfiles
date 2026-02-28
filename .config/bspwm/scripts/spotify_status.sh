@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Script de estado de Spotify para polybar
+# SEGURO: Solo lee información, no modifica nada
+
 # Comprobar si Spotify está abierto
 if ! pgrep -x "spotify" >/dev/null; then
   echo " %{F#666}󰝛" # Icono de música apagada si no está abierto
@@ -10,9 +13,9 @@ fi
 STATUS=$(playerctl -p spotify status 2>/dev/null)
 
 if [ "$STATUS" = "Playing" ]; then
-  echo " %{T2}" # Icono de Pause (porque está sonando)
+  echo " %{T2}󰏤" # Icono de Pause (porque está sonando)
 elif [ "$STATUS" = "Paused" ]; then
-  echo " %{T2}" # Icono de Play (porque está pausado)
+  echo " %{T2}󰐊" # Icono de Play (porque está pausado)
 else
-  echo " %{T2}" # Icono de Stop
+  echo " %{T2}󰝛" # Icono de Stop
 fi

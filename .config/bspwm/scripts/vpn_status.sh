@@ -1,4 +1,8 @@
 #!/bin/sh
+
+# Script de estado de VPN para polybar
+# SEGURO: Solo lee información de red, no modifica nada
+# NOTA: Detecta tun0 como interfaz VPN padrão
  
 IFACE=$(/usr/sbin/ifconfig | grep tun0 | awk '{print $1}' | tr -d ':')
  
